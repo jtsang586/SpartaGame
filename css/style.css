@@ -12,6 +12,25 @@
   margin-right: 20px;
 }
 
+.animation {
+  -webkit-transform: scale(2);
+  -webkit-transition-duration: 2s;
+/*  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+*/}
+
+.badClick{
+  background-color: blue;
+}
+
+.goodClick{
+  background-color: green;
+}
+
+.perfectClick{
+  background-color: gold;
+}
+
 #topLeft {
   width:100px;
   height: 100px;
@@ -19,7 +38,7 @@
   border-radius: 70px;
   margin-right: 20px;
   margin-top: 100px;
-
+  float: left;
 
 }
 
@@ -30,6 +49,8 @@
   border: 2px solid black;
   display: inline-block;
   margin-left: 20px;
+  margin-bottom: 50px;
+  float: left;
 }
 
 #middleLeft {
@@ -47,6 +68,7 @@
   border-radius: 150px;
   border: 2px solid black;
   display: inline-block;
+  float: left;
 }
 
 #smallCircle {
