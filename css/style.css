@@ -60,6 +60,7 @@
   border: 2px solid black;
   display: inline-block;
   margin-bottom: 0px;
+  float: left;
 }
 
 #mainCircle {
@@ -78,4 +79,5 @@
   border: 2px solid black;
   display: inline-block;
   margin-top: 150px;
+  float: left;  
 }
