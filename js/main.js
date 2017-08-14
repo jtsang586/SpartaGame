@@ -6,10 +6,15 @@
 
 // All circles
 var $topLeft = $("#topLeft");
+var $topLeftA = $("topLeftAnim");
 var $topMiddle = $("#topMiddle");
+var $topMiddleA = $("topMiddleAnim");
 var $middleLeft = $("#middleLeft");
+var $middleLeftA = $("middleLeftAnim")
 var $mainCircle = $("#mainCircle");
+var $mainA = $("mainAnim");
 var $smallCircle = $("#smallCircle");
+var $smallCircleA = $("smallCircleAnim");
 var $scoreBoard = $("#score");
 // Player score
 var score = null;
@@ -22,18 +27,20 @@ var $audioButton = $("#audio");
 //Functions
 function gameStart(){
   audio.play();
-  setTimeout(function(){addBeat($mainCircle);}, 5000);
-  setTimeout(function(){addBeat($topMiddle);}, 6000);
-  setTimeout(function(){addBeat($topLeft);}, 6500);
-  setTimeout(function(){addBeat($middleLeft);}, 7500);
-  setTimeout(function(){addBeat($smallCircle);}, 7800);
+  setTimeout(function(){addBeat($mainCircle, $mainA);}, 5000);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 6000);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 6500);
+  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 7500);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 7800);
 }
 
-function addBeat(circle){
+function addBeat(circle,animation){
   //Need all functions to use new variable.
   var hasClicked = false;
   addBadClick();
-
+  animation.attr("class", "animate");
+  animation.attr("id", "displayN");
+  console.log(animation);
   function addBadClick(){
     if (hasClicked == false){
     circle.on("click", badClick);
@@ -44,20 +51,20 @@ function addBeat(circle){
   }
 
   function removeBadClick(){
-  circle.off("click", badClick);
-  circle.attr("class", "");
-  console.log("removed bad");
-  console.log(hasClicked);
+    circle.off("click", badClick);
+    circle.attr("class", "");
+    console.log("removed bad");
+    console.log(hasClicked);
     if (hasClicked == false){
       addGoodClick(circle);
     }
   }
 
   function addPerfectClick(){
-  circle.on("click", perfectClick);
-  console.log("perfect added");
-  circle.attr("class", "perfectClick");
-  setTimeout(function(){removePerfectClick();}, 500);
+    circle.on("click", perfectClick);
+    console.log("perfect added");
+    circle.attr("class", "perfectClick");
+    setTimeout(function(){removePerfectClick();}, 500);
   }
 
   function removePerfectClick(){
@@ -78,7 +85,7 @@ function addBeat(circle){
     circle.on("click", goodClick);
     console.log("added good");
     circle.attr("class", "goodClick");
-    setTimeout(function(){removeGoodClick();}, 500);
+    setTimeout(function(){removeGoodClick();}, 700);
   }
 
   function removeGoodClick(){
@@ -91,25 +98,25 @@ function addBeat(circle){
   }
 
   function badClick(){
-  var clicked = false;
-    if (clicked == false){
-      score += 50;
-      $scoreBoard.html("Score : " + score);
-      console.log(score);
-      clicked = true;
-    }
-  hasClicked = true;
+    var clicked = false;
+      if (clicked == false){
+        score += 50;
+        $scoreBoard.html("Score : " + score);
+        console.log(score);
+        clicked = true;
+      }
+    hasClicked = true;
   }
 
   function goodClick(){
-  var clicked = false;
-    if (clicked == false){
-      score+=100;
-      $scoreBoard.html("Score : " + score);
-      console.log(score);
-      clicked = true;
-    }
-    hasClicked = true;
+    var clicked = false;
+      if (clicked == false){
+        score+=100;
+        $scoreBoard.html("Score : " + score);
+        console.log(score);
+        clicked = true;
+      }
+      hasClicked = true;
   }
 
 function perfectClick(){

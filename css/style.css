@@ -12,12 +12,10 @@
   margin-right: 20px;
 }
 
-.animation {
-  -webkit-transform: scale(2);
-  -webkit-transition-duration: 2s;
-/*  -ms-transform: scale(0.8);
-  transform: scale(0.8);
-*/}
+#animate {
+  -webkit-transform: scale(0.6);
+  -webkit-transition-duration: 3s;
+}
 
 .badClick{
   background-color: blue;
@@ -31,15 +29,29 @@
   background-color: gold;
 }
 
+#displayN{
+  visibility: visible;
+}
+
 #topLeft {
   width:100px;
   height: 100px;
   border: 2px solid black;
   border-radius: 70px;
-  margin-right: 20px;
-  margin-top: 100px;
+  margin-top: 117px;
+  margin-left:19px;
   float: left;
+  display: inline-block;
+}
 
+.topLeftAnim {
+  width:140px;
+  height: 140px;
+  border: 2px solid black;
+  border-radius: 109px;
+  margin-top: 98px;
+  margin-right:180px;
+  visibility: hidden;
 }
 
 #topMiddle {
@@ -48,9 +60,18 @@
   border-radius: 70px;
   border: 2px solid black;
   display: inline-block;
-  margin-left: 20px;
-  margin-bottom: 50px;
+  margin-left: 30px;
+  margin-top: 20px;
   float: left;
+}
+
+.topMiddleAnim{
+  width:140px;
+  height: 140px;
+  border: 2px solid black;
+  border-radius: 98px;
+  margin-left: 10px;
+  visibility: hidden;
 }
 
 #middleLeft {
@@ -59,8 +80,17 @@
   border-radius: 80px;
   border: 2px solid black;
   display: inline-block;
-  margin-bottom: 0px;
+  margin-left:23px;
+  margin-top: 23px;
   float: left;
+}
+
+.middleLeftAnim{
+  width:168px;
+  height: 168px;
+  border-radius: 112px;
+  border: 2px solid black;
+  visibility: hidden;
 }
 
 #mainCircle {
@@ -70,6 +100,18 @@
   border: 2px solid black;
   display: inline-block;
   float: left;
+  margin-top: 50px;
+  margin-left: 50px;
+  z-index: 0;
+}
+
+.mainAnim{
+  width:350px;
+  height: 350px;
+  border-radius: 280px;
+  border: 2px solid black;
+  padding-right: 200px;
+  visibility: hidden;
 }
 
 #smallCircle {
@@ -78,6 +120,16 @@
   border-radius: 70px;
   border: 2px solid black;
   display: inline-block;
-  margin-top: 150px;
+  margin-top: 161px;
+  margin-left:12px;
   float: left;  
+}
+
+.smallCircleAnim{
+  width:84px;
+  height: 84px;
+  border-radius: 98px;
+  border: 2px solid black;
+  margin-top: 150px;
+  visibility: hidden;
 }
