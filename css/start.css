@@ -1,0 +1,20 @@
+body {
+  background-color: #F4F7BE;
+}
+
+h1 {
+  text-align: center;
+}
+p{
+  margin-bottom: 10px;
+}
+
+button{
+  margin-bottom: 20px;
+}
+#front{
+  background-color: #DEBA6F;
+  width: 500px;
+  height: 500px;
+  border-radius: 25px;
+}
