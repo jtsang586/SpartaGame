@@ -38,20 +38,20 @@ function gameStart(){
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 4128);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 4548);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 5052);
- setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 6102);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 6102);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 6270);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 6564);
- setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 7068);
- setTimeout(function(){addBeat($topLeft, $topLeftA);}, 7782);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 7068);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 7782);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 8538);
- setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 9378);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 9378);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 9672);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 10008);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 10428);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 10680);
- setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 12108);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 12108);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 12486);
- setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 13158);
+  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 13158);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 13452);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 13788);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 14082);
@@ -66,6 +66,8 @@ function gameStart(){
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 20256);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 20718);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 21222);
+  // afterSong();
+  setTimeout(function(){window.location.href = "start.html";}, 24000);
 }
 
 function addBeat(circle,animation){
@@ -157,6 +159,12 @@ function perfectClick(){
     }
     hasClicked = true;
   }
+}
+
+function afterSong(){
+  $audioButton.on("ended",function(){
+    window.location.href = "start.html";
+  });
 }
 
 //temp function
