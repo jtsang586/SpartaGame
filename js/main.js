@@ -112,7 +112,8 @@ function addBeat(circle,animation){
         console.log(score);
         $("h2").html("MISS!!!");
       }
-    }animation.attr("class", "");
+    }
+    animation.attr("class", "");
     counter++;
     console.log(counter);
   }
@@ -133,24 +134,24 @@ function addBeat(circle,animation){
   }
 
   function badClick(){
-      if (hasClicked == false){
-        score += 50;
-        $scoreBoard.html("Score : " + score);
-        $("h2").html("BAD!!!");
-      }
-    hasClicked = true;
+    if (hasClicked == false){
+      score += 50;
+      $scoreBoard.html("Score : " + score);
+      $("h2").html("BAD!!!");
+    }
+  hasClicked = true;
   }
 
   function goodClick(){
-      if (hasClicked == false){
-        score+=100;
-        $scoreBoard.html("Score : " + score);
-        $("h2").html("Good!!!");
-      }
-      hasClicked = true;
+    if (hasClicked == false){
+      score+=100;
+      $scoreBoard.html("Score : " + score);
+      $("h2").html("Good!!!");
+    }
+    hasClicked = true;
   }
 
-function perfectClick(){
+  function perfectClick(){
     if (hasClicked == false){
       score+=200;
       $scoreBoard.html("Score : " + score);
