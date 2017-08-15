@@ -84,7 +84,7 @@ function gameStart(){
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 35276);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 35738);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 36242);
-  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 36746);
+  // setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 36746);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 37712);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 38132);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 38678);
@@ -108,8 +108,8 @@ function gameStart(){
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 50834);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 51338);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 52304);
-  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 53304);
-  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 53682);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 53304);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 53682);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 54682);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 55228);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 55690);
@@ -124,12 +124,60 @@ function gameStart(){
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 61066);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 62066);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 63032);
-  // 1:02:21
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 63452);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 63998);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 64998);
+  // 1:05:07
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 65460);
-  setTimeout(function(){window.location.href = "start.html";}, 67800);
+  setTimeout(function(){addBeat($topLeft, $topMiddleA);}, 66048);
+  setTimeout(function(){addBeat($mainCircle, $mainA);}, 66468);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 67014);
+  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 67476);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 68064);
+  setTimeout(function(){addBeat($mainCircle, $mainA);}, 69064);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 69526);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 70828);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 71374);
+  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 71878);
+  setTimeout(function(){addBeat($mainCircle, $mainA);}, 72382);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 72886);
+  //1:12:18
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 73264);
+  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 74566);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 75364);
+  setTimeout(function(){addBeat($mainCircle, $mainA);}, 75868);
+  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 76868);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 77834);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 78632);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 79262);
+  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 80262);
+  setTimeout(function(){addBeat($mainCircle, $mainA);}, 81228);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 82570);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 83267);
+  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 84267);
+  // 1:24:00
+  setTimeout(function(){addBeat($mainCircle, $mainA);}, 84771);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 85275);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 85779);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 86279);
+  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 86779);
+  setTimeout(function(){addBeat($mainCircle, $mainA);}, 87279);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 88279);
+  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 89279);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 90035);
+  // 01:29:18
+  setTimeout(function(){addBeat($mainCircle, $mainA);}, 90707);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 91043);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 91295);
+  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 92295);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 93295);
+  setTimeout(function(){addBeat($mainCircle, $mainA);}, 94135);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 94303);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 94713);
+  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 95049);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 95343);
+  setTimeout(function(){addBeat($mainCircle, $mainA);}, 96343);
+  setTimeout(function(){window.location.href = "start.html";}, 98800);
 }
 
 function addBeat(circle,animation){
