@@ -57,16 +57,15 @@ function gameStart(){
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 14082);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 15342);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 15594);
-  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 16182);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 16182);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 16476);
-  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 16896);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 16900);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 17736);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 18366);
-  setTimeout(function(){addBeat($mainCircle, $mainA);}, 19248);
-  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 20256);
-  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 20718);
-  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 21222);
-  // afterSong();
+  setTimeout(function(){addBeat($mainCircle, $mainA);}, 18900);
+  // setTimeout(function(){addBeat($topLeft, $topLeftA);}, 20256);
+  // setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 20718);
+  // setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 21222);
   setTimeout(function(){window.location.href = "start.html";}, 24000);
 }
 
@@ -159,12 +158,6 @@ function perfectClick(){
     }
     hasClicked = true;
   }
-}
-
-function afterSong(){
-  $audioButton.on("ended",function(){
-    window.location.href = "start.html";
-  });
 }
 
 //temp function
