@@ -1,20 +1,48 @@
+@font-face {
+  font-family: 'nightmare';
+  src: url('../Nightmare_Hero_Normal.ttf');
+}
+
 body {
   background-color: #F4F7BE;
 }
 
 h1 {
   text-align: center;
+  font-family: 'nightmare', sans-serif;
+  font-size: 100px;
 }
 p{
   margin-bottom: 10px;
+  font-size: 22px;
 }
 
 button{
   margin-bottom: 20px;
+}
+
+a{
+  margin-right: 60px;
 }
 #front{
   background-color: #DEBA6F;
   width: 500px;
   height: 500px;
   border-radius: 25px;
+}
+
+#end{
+  background-color: #DEBA6F;
+  width: 500px;
+  height: 500px;
+  border-radius: 25px;
+  display: none;
+}
+
+#top{
+  margin-bottom: 50px;
+}
+
+#homeButton{
+  margin-top: 60px;
 }

@@ -19,11 +19,10 @@ var $scoreBoard = $("#score");
 // Player score
 var score = null;
 // Timer?
-var audio = new Audio("7nation.mp3");
+var audio = new Audio("sound/7nation.mp3");
 
 //temp variables
 var $audioButton = $("#audio");
-var counter = 0;
 //---------------------------------------------------------------
 //Functions
 function gameStart(){
@@ -177,7 +176,8 @@ function gameStart(){
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 95049);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 95343);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 96343);
-  setTimeout(function(){window.location.href = "start.html";}, 98800);
+  setTimeout(function(){setScore();}, 98000);
+  setTimeout(function(){window.location.href = "end.html";}, 98800);
 }
 
 function addBeat(circle,animation){
@@ -220,13 +220,10 @@ function addBeat(circle,animation){
       if (score > 100){
         score -= 100;
         $scoreBoard.html("Score : " + score);
-        console.log(score);
         $("h2").html("MISS!!!");
       }
     }
     animation.attr("class", "");
-    counter++;
-    console.log(counter);
   }
 
   function addGoodClick(){
@@ -248,9 +245,10 @@ function addBeat(circle,animation){
     if (hasClicked == false){
       score += 50;
       $scoreBoard.html("Score : " + score);
-      $("h2").html("BAD!!!");
+      $("h2").html("BAD!!!").css("display", "block");
     }
   hasClicked = true;
+  animation.attr("class", "");
   }
 
   function goodClick(){
@@ -260,16 +258,42 @@ function addBeat(circle,animation){
       $("h2").html("Good!!!");
     }
     hasClicked = true;
+    animation.attr("class", "");
   }
 
 function perfectClick(){
+
     if (hasClicked == false){
       score+=200;
       $scoreBoard.html("Score : " + score);
       $("h2").html("Perfect!!!");
     }
+
     hasClicked = true;
   }
+}
+
+function setScore(){
+  var highscore = localStorage.getItem("7Nhighscore");
+  var player1Score = localStorage.getItem("player1Score");
+
+  if (highscore !== null){
+    if (score > highscore){
+      localStorage.setItem("7Nhighscore", score);
+    }
+  }
+  else {
+    localStorage.setItem("7Nhighscore", score);
+  }
+  if (player1Score !== null){
+    localStorage.setItem("player2Score", score);
+    localStorage.setItem("playerFinished", "player2");
+  } else {
+    localStorage.setItem("player1Score", score);
+  }
+
+  localStorage.setItem("7NlastScore", score);
+  localStorage.setItem("lastSong", "7Nation");
 }
 
 //temp function
