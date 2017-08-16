@@ -290,10 +290,10 @@ function setScore(){
     localStorage.setItem("7Nhighscore", score);
   }
   if (player1Score !== null){
-    localStorage.setItem("player1Score", score);
-  } else {
     localStorage.setItem("player2Score", score);
     localStorage.setItem("playerFinished", "player2");
+  } else {
+    localStorage.setItem("player1Score", score);
   }
 
   localStorage.setItem("7NlastScore", score);
