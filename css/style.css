@@ -10,6 +10,8 @@ body{
 
 h2{
   text-align: center;
+  height: 33px;
+/*  display: none;*/
 }
 
 .topSpacing{

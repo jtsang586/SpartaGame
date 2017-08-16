@@ -19,7 +19,7 @@ var $scoreBoard = $("#score");
 // Player score
 var score = null;
 // Timer?
-var audio = new Audio("mario.mp3");
+var audio = new Audio("sound/mario.mp3");
 
 //temp variables
 var $audioButton = $("#audio");
@@ -66,7 +66,8 @@ function gameStart(){
   // setTimeout(function(){addBeat($topLeft, $topLeftA);}, 20256);
   // setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 20718);
   // setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 21222);
-  setTimeout(function(){window.location.href = "start.html";}, 24000);
+  setTimeout(function(){setScore();}, 21000)
+  setTimeout(function(){window.location.href = "end.html";}, 24000);
 }
 
 function addBeat(circle,animation){
@@ -89,9 +90,11 @@ function addBeat(circle,animation){
   function removeBadClick(){
     circle.off("click", badClick);
     circle.attr("class", "");
+
     if (hasClicked == false){
       addGoodClick(circle);
     }
+
   }
 
   function addPerfectClick(){
@@ -105,14 +108,16 @@ function addBeat(circle,animation){
   function removePerfectClick(){
     circle.off("click", perfectClick);
     circle.attr("class", "");
+
     if (hasClicked == false){
       if (score > 100){
         score -= 100;
         $scoreBoard.html("Score : " + score);
-        console.log(score);
+   
         $("h2").html("MISS!!!");
       }
     }
+
     animation.attr("class", "");
     counter++;
     console.log(counter);
@@ -139,7 +144,8 @@ function addBeat(circle,animation){
       $scoreBoard.html("Score : " + score);
       $("h2").html("BAD!!!");
     }
-  hasClicked = true;
+  hasClicked = true
+  animation.attr("class", "");
   }
 
   function goodClick(){
@@ -149,6 +155,7 @@ function addBeat(circle,animation){
       $("h2").html("Good!!!");
     }
     hasClicked = true;
+    animation.attr("class", "");
   }
 
   function perfectClick(){
@@ -161,6 +168,28 @@ function addBeat(circle,animation){
   }
 }
 
+function setScore(){
+  var highscore = localStorage.getItem("mariohighscore");
+  var player1Score = localStorage.getItem("player1Score");
+
+  if (highscore !== null){
+    if (score > highscore){
+      localStorage.setItem("mariohighscore", score);
+    }
+  }
+  else {
+    localStorage.setItem("mariohighscore", score);
+  }
+  if (player1Score !== null){
+    localStorage.setItem("player2Score", score);
+    localStorage.setItem("playerFinished", "player2");
+  } else {
+    localStorage.setItem("player1Score", score);
+  }
+
+  localStorage.setItem("mariolastScore", score);
+  localStorage.setItem("lastSong", "mario");
+}
 //temp function
 $audioButton.on("click", function(){
   audio.pause();
