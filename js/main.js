@@ -48,8 +48,8 @@ function gameStart(){
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 10008);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 10428);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 10680);
-  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 12108);
-  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 12486);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 12108);
+  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 12486);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 13158);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 13452);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 13788);

@@ -18,7 +18,8 @@ h2{
   text-align: center;
   height: 33px;
   margin-bottom: 0px;
-/*  display: none;*/
+  font-family: "nightmare";
+  font-size: 60px;
 }
 
 .topSpacing{
