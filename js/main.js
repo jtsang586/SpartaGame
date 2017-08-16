@@ -23,7 +23,6 @@ var audio = new Audio("sound/mario.mp3");
 
 //temp variables
 var $audioButton = $("#audio");
-var counter = 0;
 //---------------------------------------------------------------
 //Functions
 function gameStart(){
@@ -119,8 +118,6 @@ function addBeat(circle,animation){
     }
 
     animation.attr("class", "");
-    counter++;
-    console.log(counter);
   }
 
   function addGoodClick(){

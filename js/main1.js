@@ -23,7 +23,6 @@ var audio = new Audio("sound/7nation.mp3");
 
 //temp variables
 var $audioButton = $("#audio");
-var counter = 0;
 //---------------------------------------------------------------
 //Functions
 function gameStart(){
@@ -221,13 +220,10 @@ function addBeat(circle,animation){
       if (score > 100){
         score -= 100;
         $scoreBoard.html("Score : " + score);
-        console.log(score);
         $("h2").html("MISS!!!");
       }
     }
     animation.attr("class", "");
-    counter++;
-    console.log(counter);
   }
 
   function addGoodClick(){

@@ -1,16 +1,23 @@
-/*.circles {
-  width:100px;
-  height: 100px;
-  border: 2px solid black;
-}*/
+@font-face {
+  font-family: 'nightmare';
+  src: url('../Nightmare_Hero_Normal.ttf');
+}
 
 body{
   background-color: #F4F7BE;
 }
 
+h1{
+  font-family: "nightmare";
+  text-align: center;
+  font-size: 90px;
+}
+
+
 h2{
   text-align: center;
   height: 33px;
+  margin-bottom: 0px;
 /*  display: none;*/
 }
 
@@ -39,6 +46,10 @@ h2{
   background-color: gold;
 }
 
+#score{
+  font-size: 25px;
+/*  font-weight: bold;*/
+}
 
 #topLeft {
   width:100px;

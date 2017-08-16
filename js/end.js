@@ -5,15 +5,15 @@ function displayScore(){
   var playerFinished = localStorage.getItem("playerFinished");
 
   if (playerFinished == "player2" && players == 2){
-    console.log(playerFinished);
-    console.log(players);
-    $("#front").css("display", "none");
-    $("#end").css("display", "block");
     var player1Score = localStorage.getItem("player1Score");
     var player2Score = localStorage.getItem("player2Score");
 
+    $("#front").css("display", "none");
+    $("#end").css("display", "block");
+
     $("#player1Display").html("Player 1 score was: " + player1Score);
     $("#player2Display").html("Player 2 score was: " + player2Score);
+    
     if (player1Score > player2Score){
       $("#result").html("Player 1 is the Winner!!!")
     } else if (player2Score > player1Score){
