@@ -63,7 +63,7 @@ function gameStart(){
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 18900);
 
   setTimeout(function(){setScore();}, 21000)
-  setTimeout(function(){window.location.href = "end.html";}, 24000);
+  setTimeout(function(){window.location.href = "end.html";}, 22000);
 }
 
 function addBeat(circle,animation){
