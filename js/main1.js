@@ -20,21 +20,21 @@ var $scoreBoard = $("#score");
 var score = null;
 // Timer?
 var audio = new Audio("sound/7nation.mp3");
-
-//temp variables
-var $audioButton = $("#audio");
+var counter =0;
 //---------------------------------------------------------------
 //Functions
 function gameStart(){
   // time taken for perfect is 1.7 sec, there is 600ms delay
   audio.play();
+  // Every beat in song
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 1312);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 1900);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 2388);
+  setTimeout(function(){console.log(counter++);}, 2388);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 2766);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 3060);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 3690);
-  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 4698);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 4668);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 5748);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 6546);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 7176);
@@ -89,35 +89,42 @@ function gameStart(){
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 38678);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 39140);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 39602);
+  setTimeout(function(){console.log(counter++);}, 39602);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 40602);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 42526);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 43492);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 43996);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 44500);
+  setTimeout(function(){console.log(counter++);}, 44500);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 44962);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 45962);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 46466);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 46886);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 47432);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 47894);
+  setTimeout(function(){console.log(counter++);}, 47894);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 48860);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 49406);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 49868);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 50330);
+  setTimeout(function(){console.log(counter++);}, 50330);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 50834);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 51338);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 52304);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 53304);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 53682);
+  setTimeout(function(){console.log(counter++);}, 53682);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 54682);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 55228);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 55690);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 56110);
+  setTimeout(function(){console.log(counter++);}, 56110);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 56656);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 57118);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 57622);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 58588);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 59554);
+  setTimeout(function(){console.log(counter++);}, 59554);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 60058);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 60562);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 61066);
@@ -125,23 +132,24 @@ function gameStart(){
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 63032);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 63452);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 63998);
+  setTimeout(function(){console.log(counter++);}, 63998);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 64998);
   // 1:05:07
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 65460);
-  setTimeout(function(){addBeat($topLeft, $topMiddleA);}, 66048);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 66048);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 66468);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 67014);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 67476);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 68064);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 69064);
-  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 69526);
-  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 70828);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 69526);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 70828);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 71374);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 71878);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 72382);
-  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 72886);
+  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 72886);
   //1:12:18
-  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 73264);
+  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 73264);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 74566);
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 75364);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 75868);
@@ -159,25 +167,26 @@ function gameStart(){
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 85275);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 85779);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 86279);
-  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 86779);
-  setTimeout(function(){addBeat($mainCircle, $mainA);}, 87279);
-  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 88279);
-  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 89279);
-  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 90035);
-  // 01:29:18
-  setTimeout(function(){addBeat($mainCircle, $mainA);}, 90707);
-  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 91043);
-  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 91295);
-  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 92295);
-  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 93295);
-  setTimeout(function(){addBeat($mainCircle, $mainA);}, 94135);
-  setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 94303);
-  setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 94713);
-  setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 95049);
-  setTimeout(function(){addBeat($topLeft, $topLeftA);}, 95343);
-  setTimeout(function(){addBeat($mainCircle, $mainA);}, 96343);
-  setTimeout(function(){setScore();}, 98000);
-  setTimeout(function(){window.location.href = "end.html";}, 98800);
+  // setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 86779);
+  // setTimeout(function(){addBeat($mainCircle, $mainA);}, 87279);
+  // setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 88279);
+  // setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 89279);
+  // setTimeout(function(){addBeat($topLeft, $topLeftA);}, 90035);
+  // // 01:29:18
+  // setTimeout(function(){addBeat($mainCircle, $mainA);}, 90707);
+  // setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 91043);
+  // setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 91295);
+  // setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 92295);
+  // setTimeout(function(){addBeat($topLeft, $topLeftA);}, 93295);
+  // setTimeout(function(){addBeat($mainCircle, $mainA);}, 94135);
+  // setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 94303);
+  // setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 94713);
+  // setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 95049);
+  // setTimeout(function(){addBeat($topLeft, $topLeftA);}, 95343);
+  // setTimeout(function(){addBeat($mainCircle, $mainA);}, 96343);
+
+  setTimeout(function(){setScore();}, 89800);
+  setTimeout(function(){window.location.href = "end.html";}, 90000);
 }
 
 function addBeat(circle,animation){
@@ -193,6 +202,7 @@ function addBeat(circle,animation){
     if (hasClicked == false){
     circle.on("click", badClick);
     circle.attr("class", "badClick");
+    // remove badClick listener after half a second
     setTimeout(function(){removeBadClick(circle);}, 500);
     }
   }
@@ -200,22 +210,24 @@ function addBeat(circle,animation){
   function removeBadClick(){
     circle.off("click", badClick);
     circle.attr("class", "");
+
     if (hasClicked == false){
+      // if there's not been a click then add next listener
       addGoodClick(circle);
     }
+
   }
 
   function addPerfectClick(){
     circle.on("click", perfectClick);
     circle.attr("class", "perfectClick");
-    // animation.css("display", "none");
-    // animation.hide();
     setTimeout(function(){removePerfectClick();}, 500);
   }
 
   function removePerfectClick(){
     circle.off("click", perfectClick);
     circle.attr("class", "");
+
     if (hasClicked == false){
       if (score > 100){
         score -= 100;
@@ -223,6 +235,7 @@ function addBeat(circle,animation){
         $("h2").html("MISS!!!");
       }
     }
+
     animation.attr("class", "");
   }
 
@@ -236,27 +249,32 @@ function addBeat(circle,animation){
   function removeGoodClick(){
     circle.off("click", goodClick);
     circle.attr("class", "");
+
     if (hasClicked == false){
       addPerfectClick(circle);
     }
   }
 
   function badClick(){
+
     if (hasClicked == false){
       score += 50;
       $scoreBoard.html("Score : " + score);
       $("h2").html("BAD!!!").css("display", "block");
     }
+
   hasClicked = true;
   animation.attr("class", "");
   }
 
   function goodClick(){
+
     if (hasClicked == false){
       score+=100;
       $scoreBoard.html("Score : " + score);
       $("h2").html("Good!!!");
     }
+
     hasClicked = true;
     animation.attr("class", "");
   }
@@ -295,11 +313,6 @@ function setScore(){
   localStorage.setItem("7NlastScore", score);
   localStorage.setItem("lastSong", "7Nation");
 }
-
-//temp function
-$audioButton.on("click", function(){
-  audio.pause();
-});
 
 //------------------------------------------------------
 //main function start
