@@ -185,6 +185,7 @@ function setScore(){
   else {
     localStorage.setItem("mariohighscore", score);
   }
+  
   if (player1Score !== null){
     localStorage.setItem("player2Score", score);
     localStorage.setItem("playerFinished", "player2");

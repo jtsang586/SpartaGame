@@ -153,6 +153,8 @@ function gameStart(){
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 85275);
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 85779);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 86279);
+
+  //Part of the song that is removed to end less abruptly
   // setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 86779);
   // setTimeout(function(){addBeat($mainCircle, $mainA);}, 87279);
   // setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 88279);
@@ -290,6 +292,7 @@ function setScore(){
   else {
     localStorage.setItem("7Nhighscore", score);
   }
+
   if (player1Score !== null){
     localStorage.setItem("player2Score", score);
     localStorage.setItem("playerFinished", "player2");
