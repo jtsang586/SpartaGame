@@ -13,8 +13,6 @@ function displayScore(){
 
     $("#player1Display").html("Player 1 score: " + player1Score);
     $("#player2Display").html("Player 2 score: " + player2Score);
-    console.log(player1Score);
-    console.log(player2Score);
       
       if (player1Score > player2Score){
         $("#result").html("Player 1 is the Winner!!!")
@@ -64,7 +62,6 @@ function twoPlayer(){
     localStorage.setItem("players", 2);
   })
 }
-
 
 displayScore();
 onePlayer();

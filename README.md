@@ -68,7 +68,12 @@ function gameStart(){
   setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 3078);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 3666);
 ```
-SetTimeOut is used to time every beat to match the beats in the song. The final function is ```setTimeout(function(){window.location.href = "end.html";}, 24000);``` Which takes the user to the end screen once the song is finished.
+SetTimeOut is used to time every beat to match the beats in the song. The final function is 
+
+```javascript 
+setTimeout(function(){window.location.href = "end.html";}, 24000);
+``` 
+Which takes the user to the end screen once the song is finished.
 
 The addBeat() function adds and removes listeners and starts the animation for every beat in the song. The setScore() function adds variables to the local storage to be displayed at the end screen. Which variables are stored/ created depends on if the player had picked two player game. 
 
