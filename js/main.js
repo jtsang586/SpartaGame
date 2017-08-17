@@ -21,13 +21,12 @@ var score = null;
 // Timer?
 var audio = new Audio("sound/mario.mp3");
 
-//temp variables
-var $audioButton = $("#audio");
 //---------------------------------------------------------------
 //Functions
 function gameStart(){
   // time taken for perfect is 1.7 sec, there is 600ms delay
   audio.play();
+  // Every beat in song
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 900);
   setTimeout(function(){addBeat($topLeft, $topLeftA);}, 1400);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 2070);
@@ -62,28 +61,31 @@ function gameStart(){
   setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 17736);
   setTimeout(function(){addBeat($middleLeft, $middleLeftA);}, 18366);
   setTimeout(function(){addBeat($mainCircle, $mainA);}, 18900);
-  // setTimeout(function(){addBeat($topLeft, $topLeftA);}, 20256);
-  // setTimeout(function(){addBeat($topMiddle, $topMiddleA);}, 20718);
-  // setTimeout(function(){addBeat($smallCircle, $smallCircleA);}, 21222);
+
   setTimeout(function(){setScore();}, 21000)
-  setTimeout(function(){window.location.href = "end.html";}, 24000);
+  setTimeout(function(){window.location.href = "end.html";}, 22000);
 }
 
 function addBeat(circle,animation){
   //Need all functions to use new variable.
   animation.hide();
   var hasClicked = false;
+  // Start chain of listeners
   addBadClick();
+  // Start animation
   animation.show();
   animation.attr("class", "animate");
   animation.css("visibility", "visible");
 
   function addBadClick(){
+
     if (hasClicked == false){
     circle.on("click", badClick);
     circle.attr("class", "badClick");
+    // remove badClick listener after half a second
     setTimeout(function(){removeBadClick(circle);}, 500);
     }
+
   }
 
   function removeBadClick(){
@@ -91,6 +93,7 @@ function addBeat(circle,animation){
     circle.attr("class", "");
 
     if (hasClicked == false){
+      // if there's not been a click then add next listener
       addGoodClick(circle);
     }
 
@@ -99,8 +102,6 @@ function addBeat(circle,animation){
   function addPerfectClick(){
     circle.on("click", perfectClick);
     circle.attr("class", "perfectClick");
-    // animation.css("display", "none");
-    // animation.hide();
     setTimeout(function(){removePerfectClick();}, 500);
   }
 
@@ -112,7 +113,6 @@ function addBeat(circle,animation){
       if (score > 100){
         score -= 100;
         $scoreBoard.html("Score : " + score);
-   
         $("h2").html("MISS!!!");
       }
     }
@@ -130,37 +130,45 @@ function addBeat(circle,animation){
   function removeGoodClick(){
     circle.off("click", goodClick);
     circle.attr("class", "");
+
     if (hasClicked == false){
       addPerfectClick(circle);
     }
   }
 
   function badClick(){
+
     if (hasClicked == false){
       score += 50;
       $scoreBoard.html("Score : " + score);
       $("h2").html("BAD!!!");
     }
+
   hasClicked = true
   animation.attr("class", "");
+  animation.css("visibility", "hidden");
   }
 
   function goodClick(){
+
     if (hasClicked == false){
       score+=100;
       $scoreBoard.html("Score : " + score);
       $("h2").html("Good!!!");
     }
+
     hasClicked = true;
     animation.attr("class", "");
   }
 
   function perfectClick(){
+
     if (hasClicked == false){
       score+=200;
       $scoreBoard.html("Score : " + score);
       $("h2").html("Perfect!!!");
     }
+
     hasClicked = true;
   }
 }
@@ -177,6 +185,7 @@ function setScore(){
   else {
     localStorage.setItem("mariohighscore", score);
   }
+  
   if (player1Score !== null){
     localStorage.setItem("player2Score", score);
     localStorage.setItem("playerFinished", "player2");
@@ -187,10 +196,6 @@ function setScore(){
   localStorage.setItem("mariolastScore", score);
   localStorage.setItem("lastSong", "mario");
 }
-//temp function
-$audioButton.on("click", function(){
-  audio.pause();
-});
 
 //------------------------------------------------------
 //main function start
