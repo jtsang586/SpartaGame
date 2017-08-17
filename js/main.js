@@ -146,6 +146,7 @@ function addBeat(circle,animation){
 
   hasClicked = true
   animation.attr("class", "");
+  animation.css("visibility", "hidden");
   }
 
   function goodClick(){

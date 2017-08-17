@@ -30,6 +30,11 @@ function displayScore(){
     localStorage.removeItem("player2Score");
   } else if (players == 2){
       normalScores();
+      if (lastSong == "mario"){
+        $(".7NButton").css("display", "none");
+      } else if (lastSong == "7Nation"){
+        $(".marioButton").css("display", "none");
+      }
     }
   
   else {
