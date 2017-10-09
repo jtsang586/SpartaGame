@@ -3,7 +3,6 @@
 // to gain points.
 
 // Global variables
-
 // All circles
 var $topLeft = $("#topLeft");
 var $topLeftA = $("#topLeftAnim");
@@ -68,12 +67,10 @@ function gameStart(){
 
 function addBeat(circle,animation){
   //Need all functions to use new variable.
-  animation.hide();
   var hasClicked = false;
   // Start chain of listeners
   addBadClick();
   // Start animation
-  animation.show();
   animation.attr("class", "animate");
   animation.css("visibility", "visible");
 

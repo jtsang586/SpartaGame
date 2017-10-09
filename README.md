@@ -41,6 +41,11 @@ The game is a music game developed using HTML, JS and CSS in one week. Aim of th
 
 ### Original [Wireframe](https://wireframe.cc/Xyuhcr) for main levels
 
+The approach to developing the game was to initially develop the minimal viable product and sticking to the sprint goals. Scope creep was always a danger so it was important to stay disciplined. 
+
+The biggest challenge was creating the functions that made up the beats of the game including all the listeners and animations that ran within the function. Another big challenge was matching every beat to sections of the song. Timings were crucial as beats even even a few milliseconds off were noticeable when playing the game.
+
+What was most pleasing was getting all the animations to work in a smooth motion to the music and mouseclicks of the user. 
 ## The Code
 
 ### HTML
