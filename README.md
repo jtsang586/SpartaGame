@@ -3,6 +3,9 @@
 ## Game definition
 The game is a music game developed using HTML, JS and CSS in one week. Aim of the game is to click on highlighted areas of the screen based on the beat of a specific song. To start with the game will involve only mouse clicks and gradually become more complex.
 
+## To play
+The game is published online at https://jtsang586.github.io/SpartaGame/
+
 ## User stories
 1) The user picks the song they'd like to play. 
 
